@@ -55,7 +55,7 @@ mov ah, 0x0e
 mov al, 's'
 int 0x10
 mov ah, 0x0e
-mov al, ''
+mov al, ' '
 int 0x10
 mov ah, 0x0e
 mov al, 'S'
