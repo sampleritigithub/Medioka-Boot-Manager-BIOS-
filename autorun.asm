@@ -10,7 +10,7 @@ ReadDrive:
     ; Not very Important to learn ;
     mov ah, 0x02
     mov bx, programspace
-    mov al, 4	 ; Disk Stuff you must do
+    mov al, 32	 ; Disk Stuff you must do
     mov dl, [bootdisk]
     mov ch, 0x00 ; Cylinder
     mov dh, 0x00 ; Head
