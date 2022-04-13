@@ -2,6 +2,7 @@
 ;Custom boot manager
 [BITS 16]	;16-Bit real mode code
 call ReadDrive
+jmp programspace
 programspace equ 0x7e00
 mov [bootdisk], dl
 ReadDrive:
@@ -17,9 +18,7 @@ ReadDrive:
     int 0x13 ; BIOS Interrupt
     jc DiskReadFailed
     ret
-    mov ah, 0x0e
-    mov al, [programspace]
-    int 0x10
+
 bootdisk:
 	db 0 ; Drive data
 
